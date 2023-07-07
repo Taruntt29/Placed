@@ -1,0 +1,270 @@
+.image-wrapper {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.innershadow-box:hover {
+  box-shadow: inset 5px 14px 13px 4px #0000004f;
+}
+
+.react-calendar {
+  border: #fff !important;
+  padding-left: 2px !important;
+  padding-right: 2px !important;
+}
+
+/* .react-calendar__tile--now {
+    background: transparent !important;
+    color: #000 !important;
+} */
+
+.image-wrapper img {
+  height: auto;
+  max-width: 100%;
+}
+
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine::before {
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.3) 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: -75%;
+  position: absolute;
+  top: 0;
+  transform: skewX(-25deg);
+  width: 50%;
+  z-index: 2;
+}
+
+.shine:hover::before,
+.shine:focus::before {
+  -webkit-animation: shine 0.85s;
+  animation: shine 0.85s;
+}
+
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+.shadowspread {
+  box-shadow: 2px 2px 20px -2px #6b6a6a;
+}
+
+/* Spinning square animation */
+
+.innershadow {
+  box-shadow: inset 5px 5px 20px #000;
+}
+
+.innershadow2 {
+  box-shadow: inset 2px 2px 10px #ddd;
+}
+
+.btnshadow {
+  box-shadow: 0px 2px 4px #00000029;
+}
+
+/* .mobileinput .PhoneInputInput {
+    background: #F5F7F9;
+}
+
+.mobileinput .PhoneInputInput::placeholder {
+    font-size: 0.875rem;
+    color: rgb(0, 0, 0, 0.3);
+
+} */
+
+/* .phoneparent .PhoneInputInput {
+    background-color: #F5F7F9;
+} */
+
+/* .phoneparent .PhoneInputInput::placeholder {
+    font-size: 0.875rem;
+    color: rgb(0, 0, 0, 0.3);
+
+} */
+
+.bgblog {
+  background-image: url("/public/assets/images/blog-bg.png");
+  background-color: #181d28;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bluestrip {
+  background-image: url("/public/assets/images/bluestrip.png");
+  background-color: #2544ee;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bgcontact {
+  background-image: url("/public/assets/images/blog-bg.png");
+  background-color: #2544ee;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.box-shadow {
+  box-shadow: 2px 2px 3px 3px #2543ee1d;
+}
+
+.box-shadow1 {
+  box-shadow: 2px 2px 3px 2px #2543ee1d;
+}
+
+.signupshadow {
+  box-shadow: 0px 6px 19px #00000029;
+}
+
+.faqTrnsition {
+  transition: 4s;
+}
+
+/* Media Responsive For Mobile */
+
+@media (max-width: 600px) {
+  .prevarrow {
+    bottom: -3rem;
+    left: 25%;
+  }
+
+  .nextarrow {
+    bottom: -3rem;
+    right: 25%;
+  }
+}
+
+.on {
+  color: orange;
+}
+
+.off {
+  color: #ccc;
+}
+
+.btnstr svg:focus path {
+  color: #2544ee;
+}
+
+.bg-salmon {
+  pointer-events: none;
+}
+
+.bg-salmon path {
+  fill: #2544ee;
+}
+
+.fileInput .fileInputStylesLabel {
+  /* border-radius: ; */
+  border: 2px solid #2544ee;
+}
+
+.year-picker {
+  z-index: 0 !important;
+}
+
+/* .joditClass .jodit-popup {
+  z-index: 1300 !important;
+} */
+
+.jodit_sticky>.jodit-toolbar__box {
+  z-index: 0 !important
+}
+
+.jodit-placeholder {
+  z-index: 0 !important
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer{
+  display: flex;
+  margin: -0.5em;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px){ 
+  .react-calendar--doubleView .react-calendar__viewContainer{
+    display: block !important;
+  }
+  .react-calendar--doubleView .react-calendar__viewContainer > * {
+    width: 100% !important;
+  }
+  }
+
+
+
+  /* tooltip css */
+  [data-tooltip] {
+    position: relative;
+    cursor: pointer;
+  }
+  /* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 140%;
+  left: 50%;
+  margin-bottom: 4px;
+  margin-left: -50px;
+  padding: 8px;
+  width: 250px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
