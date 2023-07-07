@@ -1,0 +1,162 @@
+.header {
+    /* font-family: 'Kanit', sans-serif; */
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: .3s ease-in;
+    overflow: visible;
+}
+
+.header-home {
+    z-index: 999;
+}
+
+.header-bg {
+    background-color: #2544EE;
+    z-index: 99;
+}
+
+.header .navbar {
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1150px;
+    margin: auto;
+    height: 100%;
+    padding: 0 1rem;
+    /* overflow: visible; */
+}
+
+.textclass {
+    font-size: 0.8rem !important;
+}
+
+.mobile-text {
+    font-size: 1rem;
+}
+
+
+
+.nav-font {
+    font-size: 16px;
+}
+
+.desk {
+    font-size: 1rem;
+}
+
+/* .nav-item a:hover{
+      color:#F6B803;
+    } */
+
+.header .navbar img {
+    width: 126px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.header .nav-menu {
+    display: flex;
+}
+
+.header .nav-item {
+    padding: 1.2rem;
+    /* font-weight: 500; */
+}
+
+
+.hamburger {
+    display: none;
+}
+
+.dropdown-menu {
+    visibility: visible;
+}
+
+.dropdown-mobile {
+    display: none;
+}
+
+@media screen and (max-width:940px) {
+    .nav-item a {
+        color: #fff;
+    }
+
+    .header {
+        max-width: 100%;
+        /* background-color: #E3EEFF; */
+    }
+
+    .header .navbar {
+        max-width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 90px;
+        flex-direction: column;
+        background-color: #2544EE;
+        width: 100%;
+        height: 100vh;
+        overflow-y: scroll;
+        z-index: 999;
+        transition: .3s;
+    }
+
+    .nav-menu.active {
+        left: 0;
+        top: 110px;
+    }
+
+    .nav-desk {
+        margin: 1.5rem 0;
+    }
+
+    .header .navbar img {
+        /* width: 60px; */
+    }
+
+    .dropdown-menu {
+        visibility: hidden;
+    }
+
+    .dropdown-mobile {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 510px) and (max-width: 620px) {
+    .boxessingle {
+        margin-top: 4rem;
+    }
+}
+
+@media only screen and (min-width: 621px) and (max-width: 770px) {
+    .boxessingle {
+        margin-top: 9remnav-menu active;
+    }
+}
+
+.bordergradient {
+    position: relative;
+    background: linear-gradient(to right, #0396EF, #00F89B);
+    padding: 2px 3px;
+    border-radius: 5px;
+}
+
+.mainborder {
+    background: #0D0D0D;
+    color: white;
+    padding: 7px 40px;
+    border-radius: 5px;
+}
